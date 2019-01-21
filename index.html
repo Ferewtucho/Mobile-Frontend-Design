@@ -19,8 +19,16 @@
       <div class="bottom"></div>
       <div class="screen">
         <img src="assets/img/mobile-small.jpg" alt="new york" />
+        <h2>10:40<span>AM</span><br /><span>26th Jan, 2019</span></h2>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".bottom").click(function() {
+          $(".screen").toggleClass("active");
+        });
+      });
+    </script>
   </body>
 </html>
