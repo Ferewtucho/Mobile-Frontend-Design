@@ -17,15 +17,15 @@
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
-    <script src="main.js"></script>
-  </head>
-  <body>
+    
     <div class="mobile">
       <div class="top"></div>
       <div class="bottom"></div>
       <div class="screen">
         <img src="assets/img/mobile-small.jpg" alt="new york" />
-        <h2>10:40<span>AM</span><br /><span>26th Jan, 2019</span></h2>
+        <h2 id ="time"></h2>
+        <!-- <h2 id ="time"><span ></span><br /><span>26th Jan, 2019</span>
+        </h2> -->
         <ul>
           <li><i class="fa fa-phone" aria-hidden="true"></i></li>
           <li><i class="fa fa-comment" aria-hidden="true"></i></li>
@@ -35,11 +35,26 @@
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         $(".bottom").click(function() {
           $(".screen").toggleClass("active");
         });
+        // var today = new Date().toLocaleTimeString();
+        // console.log(today);
+        var date = new Date();
+        var format = "LT";
+        var format2 = "ll";
+        var date2 = moment(date).format(format2);
+        console.log(date2);
+        var today = moment(date).format(format);
+        var time =  today.split(":")
+        console.log(time);
+        var min = time[1].split(" ")
+        console.log(min)
+        $("#time").html(time[0] + ":" + min[0] + "<span>" + min[1] +"<br>" +"</span>" + "<span>" + date2 +"</span>")
+        
       });
     </script>
   </body>

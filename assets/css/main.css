@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Merriweather);
+@import url(https://fonts.googleapis.com/css?family=Poppins);
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: "Merriweather", serif;
+  font-family: "Poppins", sans-serif;
   background: url(../img/mobile.jpg);
   background-size: cover;
 }
@@ -114,8 +114,10 @@ h2 {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   opacity: 0;
 }
+
 h2 span {
   font-size: 0.4em;
+  color: #ffffff;
 }
 .screen.active h2 {
   opacity: 1;
